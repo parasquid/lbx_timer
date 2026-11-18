@@ -1,5 +1,7 @@
 //! UI tests: real widget interactions through `iced_test::Simulator`.
 
+mod screenshots;
+
 use super::format::*;
 use super::*;
 use chrono::TimeZone;

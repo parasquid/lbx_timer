@@ -2,6 +2,20 @@
 
 A native, Linux-first Rust work timer for Labelbox, built with iced and SQLite.
 
+## Screenshots
+
+These screenshots show the app rendered with illustrative session data and a
+simulated Hubstaff connection.
+
+| Linked timers and continuation totals | Aggregate session report |
+| --- | --- |
+| <img src="docs/screenshots/timers.png" alt="Running timer with three linked timers, Hubstaff status, and totals for this session and across continuations" width="360"> | <img src="docs/screenshots/session-report.png" alt="Aggregate report combining two recordings into timer totals, percentage shares, and notes" width="360"> |
+
+On wider windows, Details shows notes and what triggered each event beside
+History's timer breakdown and timeline.
+
+<img src="docs/screenshots/details-history.png" alt="Wide layout showing an active timer, manual event triggers, and an expanded session history with timer shares and a timeline" width="1000">
+
 ## Run
 
 From the LBX Timer project root:
@@ -206,3 +220,7 @@ Advanced toolchain, build, test, and custom-database instructions are in
 
 Planned features are tracked in
 [docs/todo.md](docs/todo.md).
+
+## License
+
+[MIT](LICENSE) © 2026 parasquid.

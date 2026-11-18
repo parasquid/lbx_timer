@@ -131,6 +131,30 @@ simulator does not search tooltip overlays, so hover labels are checked only in
 the hover snapshot. The durable regression guard is the simulator's interaction
 and geometry assertions.
 
+### README screenshots
+
+The documentation capture uses disposable, illustrative session data and a
+simulated Hubstaff status; it never opens the user's database or contacts
+Hubstaff. Run it explicitly with a fixed time zone:
+
+```bash
+TZ=Asia/Kuala_Lumpur ICED_TEST_BACKEND=tiny-skia \
+  cargo test --locked --bin lbx-timer readme_screenshots -- --ignored
+```
+
+Inspect `target/ui-snapshots/readme-*-tiny-skia.png`, then copy the reviewed
+captures into the README's committed assets:
+
+```bash
+cp target/ui-snapshots/readme-timers-tiny-skia.png docs/screenshots/timers.png
+cp target/ui-snapshots/readme-details-history-tiny-skia.png docs/screenshots/details-history.png
+cp target/ui-snapshots/readme-report-tiny-skia.png docs/screenshots/session-report.png
+```
+
+If the UI intentionally changed, remove only the three generated `readme-*`
+images before rerunning the capture. The files in `docs/screenshots/` are
+documentation assets, separate from the generated review baselines.
+
 ## Manual smoke test
 
 For changes to windowing, input, persistence, or recovery, run the real binary
