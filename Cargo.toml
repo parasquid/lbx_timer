@@ -1,0 +1,23 @@
+[package]
+name = "lbx-timer"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.89"
+description = "A small native Labelbox work timer"
+
+[dependencies]
+chrono = { version = "0.4", features = ["clock"] }
+fs2 = "0.4"
+iced = { version = "0.14", features = ["tokio", "advanced", "canvas"] }
+rusqlite = { version = "0.32", features = ["bundled"] }
+serde_json = "1"
+thiserror = "2"
+tokio = { version = "1", features = ["io-util", "process", "rt", "time"] }
+uuid = { version = "1", features = ["v4"] }
+
+[dev-dependencies]
+iced_test = "0.14"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1

@@ -1,0 +1,13 @@
+{
+  "tracking_states": [
+    {
+      "id": 1001,
+      "occurred_at": "2026-11-08T01:00:00Z",
+      "type": "start",
+      "user_id": 7,
+      "project_id": 123,
+      "project_type": "project",
+      "task_id": 456
+    }
+  ]
+}
